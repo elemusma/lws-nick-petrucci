@@ -1,6 +1,6 @@
 <?php
 
-function sw_forensics_stylesheets() {
+function petrucci_stylesheets() {
 wp_enqueue_style('style', get_stylesheet_uri() );
 
 wp_enqueue_style('layout', get_theme_file_uri('/css/sections/layout.css'));
@@ -15,10 +15,10 @@ wp_enqueue_style('btn', get_theme_file_uri('/css/elements/btn.css'));
 // fonts
 wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
 // wp_enqueue_style('proxima-nova', get_theme_file_uri('/font-proxima-nova/proxima-nova.css'));
-// wp_enqueue_style('font-poppins', get_theme_file_uri('/font-poppins/font-poppins.css'));
+wp_enqueue_style('font-poppins', get_theme_file_uri('/font-poppins/font-poppins.css'));
 // wp_enqueue_style('blair-itc', get_theme_file_uri('/blair-itc/blair-itc.css'));
 // wp_enqueue_style('aspira', get_theme_file_uri('/aspira-font/aspira-font.css'));
-wp_enqueue_style('neue-haas', '//use.typekit.net/jfh7ulu.css');
+// wp_enqueue_style('neue-haas', '//use.typekit.net/jfh7ulu.css');
 // wp_enqueue_style('handel-chennai', '//use.typekit.net/lcf3uey.css');
 // wp_enqueue_style('gotham', '//use.typekit.net/met6pwh.css');
 // wp_enqueue_style('dreamboat', '//use.typekit.net/mvs2gam.css');
@@ -45,12 +45,12 @@ wp_enqueue_style('gutenberg-custom', get_theme_file_uri('/css/sections/gutenberg
 wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
 
 }
-add_action('wp_enqueue_scripts', 'sw_forensics_stylesheets');
+add_action('wp_enqueue_scripts', 'petrucci_stylesheets');
 
 
 
 // for footer
-function sw_forensics_stylesheets_footer() {
+function petrucci_stylesheets_footer() {
 	
 wp_enqueue_style('footer', get_theme_file_uri('/css/sections/footer.css'));
 wp_enqueue_style('how-it-works', get_theme_file_uri('/css/sections/how-it-works.css'));
@@ -99,7 +99,7 @@ if(is_single()){
 	}
 }
 
-add_action('get_footer', 'sw_forensics_stylesheets_footer');
+add_action('get_footer', 'petrucci_stylesheets_footer');
 
 // loads enqueued javascript files deferred
 function mind_defer_scripts( $tag, $handle, $src ) {
@@ -123,7 +123,7 @@ if ( in_array( $handle, $defer ) ) {
 } 
 add_filter( 'script_loader_tag', 'mind_defer_scripts', 10, 3 );
 
-function sw_forensics_menus() {
+function petrucci_menus() {
 register_nav_menus( array(
 'primary' => __( 'Primary' )));
 register_nav_menus( array(
@@ -133,7 +133,7 @@ add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 }
 
-add_action('after_setup_theme', 'sw_forensics_menus');
+add_action('after_setup_theme', 'petrucci_menus');
 
 if( function_exists('acf_add_options_page') ) {
 
@@ -241,13 +241,13 @@ add_shortcode('global_email', 'global_email_shortcode');
 function global_cta_shortcode() {
   $phone = globalPhone(); // get phone number dynamically
     $output = '<div>' . do_shortcode('[book_online_button]') . '</div>';
-    $output .= '<a href="tel:' . $phone . '" class="text-link d-inline-block phone text-shadow" style="">' . $phone . '</a>';
+    $output .= '<a href="tel:' . $phone . '" class="text-link d-inline-block phone text-shadow-white" style="">' . $phone . '</a>';
     return $output;
 }
 
 add_shortcode('nav_cta', 'global_cta_shortcode');
 
-// function sw_forensics_contact_shortcode() {
+// function petrucci_contact_shortcode() {
 //     // Example: globalPhone() returns '+1720.593.1640' or a formatted HTML snippet
 //     $phone = globalPhone(); // get phone number dynamically
 
@@ -258,14 +258,14 @@ add_shortcode('nav_cta', 'global_cta_shortcode');
 //     </div>
 //     ');
 // }
-// add_shortcode('sw_forensics_contact', 'sw_forensics_contact_shortcode');
+// add_shortcode('petrucci_contact', 'petrucci_contact_shortcode');
 
 function sw_forensic_contact_shortcode() {
   $phone = globalPhone(); // get phone number dynamically
     return do_shortcode('
 [button href="#expert-opinion" class="d-lg-hidden d-inline-block small contact-expert" style="margin-left:0px;margin-rigth:30px;"]Get Expert Opinion[/button][button href="/wp-content/uploads/2025/11/Steven-White-CV.pdf" target="_blank" class="white d-lg-hidden d-inline-block small cv-download" style="margin:0px 10px;"]CV Download[/button]
         <div style="margin:15px 0px;">
-            <span>Call Expert: </span>
+            <span>Call or Text: </span>
             <a href="tel:+' . $phone . '" class="text-link d-inline-block phone">' . $phone . '</a>
         </div>
     ');
@@ -679,7 +679,7 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 
 
 
-  function sw_forensics_cta_shortcode() {
+  function petrucci_cta_shortcode() {
     ob_start(); ?>
     <section class="position-relative text-white bg-black" style="padding:100px 0px;" id="inspection">
       <?php echo wp_get_attachment_image(64846,'full','',array(
@@ -706,7 +706,7 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
     <?php
     return ob_get_clean();
 }
-add_shortcode('sw_forensics_cta', 'sw_forensics_cta_shortcode');
+add_shortcode('petrucci_cta', 'petrucci_cta_shortcode');
 
 
 

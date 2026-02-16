@@ -9,8 +9,28 @@ Version: 1.0
 */
 
 :root {
-    --primary: #f26522;
-    --secondary: #0f2849;
+  --accent-primary-lighter: #A3C7CC;
+  --accent-primary: #d6b981;
+  --accent-primary-rgb: 241, 206, 26;
+  --accent-primary-darker: #61A0A8;
+  --accent-primary-hover: #D3B20D;
+  --accent-secondary: #e0e0e0;
+  --accent-secondary-rgb: 20,20,20;
+  --accent-secondary-hover: #E09600;
+  --accent-tertiary: #58bee4;
+  --accent-quaternary: #86c1a9;
+  --accent-quinary: #0c1748;
+  --accent-senary: #32647d;
+  --accent-septenary: #0277a3;
+  --accent-octonary: #0e4863;
+  --light: #E0E0E0;
+  --light-secondary: #e8edec;
+  --text-shadow: 1px 1px 1px black;
+  --text-shadow-white: 1px 1px 1px white;
+  --proxima-font: 'poppinsregular';
+  --proxima-bold-font: 'poppinsbold';
+  --font-regular: 'poppinsregular';
+  --font-bold: 'poppinsbold';
 }
 
 .logged-in header.position-fixed {
@@ -30,4 +50,36 @@ Version: 1.0
 .row-checkmarks svg {
 	min-width: 10px !important;
     min-height: 10px !important;
+}
+
+.bg-gradient-light-bottom {
+    background: linear-gradient(0deg, rgba(224, 224, 224, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+}
+.bg-gradient-secondary-primary {
+    background: #D6B981;
+    background: linear-gradient(0deg, rgba(214, 185, 129, 1) 0%, rgba(224, 224, 224, 1) 100%);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+}
+.bg-gradient-primary-secondary-bottom {
+    background: #D6B981;
+    background: linear-gradient(180deg, rgba(214, 185, 129, 1) 0%, rgba(224, 224, 224, 1) 100%);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+}
+.bg-gradient-secondary-white-bottom {
+    background: #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 1) 100%);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
 }

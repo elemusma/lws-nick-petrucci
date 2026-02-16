@@ -1,19 +1,6 @@
-/* footer ul.menu li, 
-footer ul.menu>li>a {
-    padding: 10px 0px;
-    color:white;
-} */
-
-/* #servicesMenuModal ul.menu>li>a {
-color:black;
-}
-#servicesMenuModal ul.menu>li>a:hover {
-color:var(--accent-primary);
-} */
-
 footer ul.menu>li:before {
     content: "";
-    background: url(/wp-content/uploads/2025/11/Pathologist-Icon.png);
+    background: url('/wp-content/uploads/2026/02/Engineering-Icon.png');
     background-size: contain;
     position: absolute;
     width: 15px;
@@ -36,11 +23,11 @@ footer ul.menu>li:after {
     display: none;
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     ul#menu-footer {
         column-count: 2;
     }
-}
+} */
 /* @media only screen and (min-width: 1200px) {
     footer ul.menu li a {
         border: none;

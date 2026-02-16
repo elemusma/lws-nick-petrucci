@@ -8,9 +8,6 @@
     line-height: 2;
 }
 
-.small {
-  font-size:80%;
-}
 .text-white *,
 .text-white {
   color: white;
@@ -54,6 +51,10 @@ a {
   text-shadow: var(--text-shadow);
 }
 
+.text-shadow-white {
+  text-shadow: var(--text-shadow-white);
+}
+
 .text-black {
   color: black;
 }
@@ -84,17 +85,17 @@ a.text-black:hover {
 
 html,
 body {
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: 'poppinsregular';
 	line-height:1.75;
 }
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: 'poppinsbold';
   line-height: 1.25;
   /* margin:0; */
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin:0px;
 }
 h2, .h2 {
@@ -130,6 +131,24 @@ h6,.h6{
 	font-size: 1.75rem;
 }
 
+/* font-family: 'poppinsblack';
+font-family: 'poppinsblack_italic';
+font-family: 'poppinsbold';
+font-family: 'poppinsbold_italic';
+font-family: 'poppinsextrabold';
+font-family: 'poppinsextrabold_italic';
+font-family: 'poppinsextralight';
+font-family: 'poppinsextralight_italic';
+font-family: 'poppinsitalic';
+font-family: 'poppinslight';
+font-family: 'poppinslight_italic';
+font-family: 'poppinsmedium';
+font-family: 'poppinsmedium_italic';
+font-family: 'poppinsregular';
+font-family: 'poppinssemibold';
+font-family: 'poppinssemibold_italic';
+font-family: 'poppinsthin'; */
+
 /* .single h1 {
     font-size: 2rem;
 } */
@@ -162,7 +181,7 @@ h6,.h6{
 
 .bold,
 strong,b {
-  font-weight: 700;
+  font-family: 'poppinsbold';
 }
 
 ul.arrows {
@@ -401,3 +420,7 @@ font-family: "gotham-narrow", sans-serif;
 font-weight: 700;
 font-style: italic;
 */
+
+.small {
+  font-size:80%;
+}
