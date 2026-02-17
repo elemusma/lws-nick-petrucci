@@ -3,12 +3,12 @@
 <section class="position-relative bg-accent-secondary text-black" style="padding:50px 0px;">
     
 <?php
-echo wp_get_attachment_image(585, 'full', false, array( 'alt' => get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ), 'class'=>'position-absolute w-100 h-100', 'style' => 'width:100%;height:auto;opacity:1;object-fit:cover;top:0;left:0;' ));
+// echo wp_get_attachment_image(585, 'full', false, array( 'alt' => get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ), 'class'=>'position-absolute w-100 h-100', 'style' => 'width:100%;height:auto;opacity:1;object-fit:cover;top:0;left:0;' ));
 ?>
 <div class="container">
 <div class="row justify-content-center">
 
-<div class="col-lg-4 col-12" style="">
+<div class="col-lg-4 col-md-6 col-12" style="">
 
 <a href="<?php echo home_url() ?>" title="Homepage link for <?php echo get_bloginfo('name') ?> - <?php echo get_bloginfo('description') ?>">
 <div style="" id="logoMain">
@@ -23,10 +23,9 @@ echo wp_get_attachment_image(585, 'full', false, array( 'alt' => get_bloginfo( '
 
 </div>
 
-<div class="col-12 desktop-hidden" style="padding:25px;"></div>
 
-<div class="col-lg-5 col-12" style="">
-  <h2 class="h3">Forensic Engineer Expert Witness</h2>
+<div class="col-lg-5 col-md-6 col-12" style="">
+  <h2 class="h4">Forensic Engineer Expert Witness</h2>
   <?php echo wp_get_attachment_image(376,'full','',array('class'=>'w-75 h-auto','style'=>'object-fit:contain;')); ?>
   <?php 
   wp_nav_menu(array(
@@ -40,7 +39,7 @@ echo wp_get_attachment_image(585, 'full', false, array( 'alt' => get_bloginfo( '
 <div class="col-12 desktop-hidden" style="padding:25px;"></div>
 
 <div class="col-lg-3 col-12" style="">
-  <h2 class="h3">Contact Expert</h2>
+  <h2 class="h4">Contact Expert</h2>
   <?php echo wp_get_attachment_image(376,'full','',array('class'=>'w-75 h-auto','style'=>'object-fit:contain;')); ?>
   <div class="" style="padding:15px 0px;">
 <?php echo wp_get_attachment_image(377,'full','',array('class'=>'h-auto','style'=>'width:15px;margin-right:15px;object-fit:contain;')); ?>
@@ -80,13 +79,15 @@ echo wp_get_attachment_image(585, 'full', false, array( 'alt' => get_bloginfo( '
     </g>
   </g>
 </svg>
+<div class="text-black">
   <?php echo do_shortcode('[global_phone]'); ?>
+</div>
 </div>
   </div>
   <hr>
   <div class="d-flex" style="padding:15px 0px;">
     <?php echo wp_get_attachment_image(378,'full','',array('class'=>'h-auto','style'=>'width:15px;margin-right:15px;object-fit:contain;')); ?>
-    <p class="bold" style="margin:0;">Monday - Friday:<br>
+    <p class="" style="margin:0;">Monday - Friday:<br>
 08:00 am – 06:00 pm<br>
 
 Saturday - Sunday:<br>
@@ -94,8 +95,8 @@ Closed</p>
   </div>
 </div>
 
-<div class="col-md-12 col-11 text-center" style="color:gray !important;padding-top:75px;">
-    <small class=""><a href="https://latinowebstudio.com/" target="_blank" rel="noopener noreferrer" title="Web Design, Development & SEO done by Latino Web Studio in Denver, CO" style="color:gray;" class="">Web Design &amp; Search Engine Optimization</a> <span class="" style="color:gray;">done by Latino Web Studio.</span></small>
+<div class="col-md-12 col-11 text-center" style="padding-top:75px;">
+    <small class=""><a href="https://latinowebstudio.com/" target="_blank" rel="noopener noreferrer" title="Web Design, Development & SEO done by Latino Web Studio in Denver, CO" style="" class="">Web Design &amp; Search Engine Optimization</a> <span class="" style="">done by Latino Web Studio.</span></small>
 </div>
 
 </div>
@@ -106,7 +107,7 @@ Closed</p>
 <div id="mobileMenu" class="modal-custom mobile-menu" style="opacity:0;pointer-events:none;">
 
 <!-- Modal content -->
-<div class="modal-content-menu modal-content-custom" style="padding: 150px 15px;background:var(--accent-secondary);
+<div class="modal-content-menu modal-content-custom" style="padding:75px 15px;background:var(--accent-secondary);
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
@@ -118,14 +119,15 @@ Closed</p>
 <span class="close-custom" id="navMenuClose">&times;</span>
 	<?php
 
-echo '<div style="width:100%;max-width:165px;" id="logoMain">';
+echo '<div style="width:100%;max-width:275px;" id="logoMain">';
 ?>
 
 <a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ); ?>">
   <div id="logoMain" style="min-width:100px;width:100%;transition:all .25s ease-in-out;">
     <div style="pointer-events:none;">
       <?php 
-      echo logoSVG();
+      // echo logoSVG();
+      echo wp_get_attachment_image(logoImg()['id'], 'full', false, array( 'alt' => get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ), 'style' => 'width:100%;height:auto;' ));
       ?>
     </div>
   </div>

@@ -55,7 +55,8 @@ a {
   text-shadow: var(--text-shadow-white);
 }
 
-.text-black {
+.text-black,
+.text-black a {
   color: black;
 }
 

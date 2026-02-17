@@ -6,31 +6,32 @@ wp_enqueue_style('style', get_stylesheet_uri() );
 wp_enqueue_style('layout', get_theme_file_uri('/css/sections/layout.css'));
 wp_enqueue_style('body', get_theme_file_uri('/css/sections/body.css'));
 wp_enqueue_style('nav', get_theme_file_uri('/css/sections/nav.css'));
+
+// fonts
+wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
+wp_enqueue_style('font-poppins', get_theme_file_uri('/font-poppins/font-poppins.css'));
+
+}
+add_action('wp_enqueue_scripts', 'petrucci_stylesheets');
+
+
+
+// for footer
+function petrucci_stylesheets_footer() {
+
 wp_enqueue_style('popup', get_theme_file_uri('/css/sections/popup.css'));
 wp_enqueue_style('hero', get_theme_file_uri('/css/sections/hero.css'));
 wp_enqueue_style('contact', get_theme_file_uri('/css/sections/contact.css'));
 wp_enqueue_style('img', get_theme_file_uri('/css/elements/img.css'));
 wp_enqueue_style('btn', get_theme_file_uri('/css/elements/btn.css'));
-	
-// fonts
-wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
-// wp_enqueue_style('proxima-nova', get_theme_file_uri('/font-proxima-nova/proxima-nova.css'));
-wp_enqueue_style('font-poppins', get_theme_file_uri('/font-poppins/font-poppins.css'));
-// wp_enqueue_style('blair-itc', get_theme_file_uri('/blair-itc/blair-itc.css'));
-// wp_enqueue_style('aspira', get_theme_file_uri('/aspira-font/aspira-font.css'));
-// wp_enqueue_style('neue-haas', '//use.typekit.net/jfh7ulu.css');
-// wp_enqueue_style('handel-chennai', '//use.typekit.net/lcf3uey.css');
-// wp_enqueue_style('gotham', '//use.typekit.net/met6pwh.css');
-// wp_enqueue_style('dreamboat', '//use.typekit.net/mvs2gam.css');
-// wp_enqueue_style('times-new-roman', '//use.typekit.net/met6pwh.css');
 
 if(is_front_page()){
 wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
 }
-if(is_page_template('templates/about.php')){
-wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
-wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));
-}
+// if(is_page_template('templates/about.php')){
+// wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
+// wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));
+// }
 if( is_page_template('templates/content-page.php' ) ){
 wp_enqueue_style('content-page', get_theme_file_uri('/css/sections/content-page.css'));
 }
@@ -43,14 +44,6 @@ wp_enqueue_style('gutenberg-custom', get_theme_file_uri('/css/sections/gutenberg
 
 // wp_enqueue_style('sidebar', get_theme_file_uri('/css/sections/sidebar.css'));
 wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
-
-}
-add_action('wp_enqueue_scripts', 'petrucci_stylesheets');
-
-
-
-// for footer
-function petrucci_stylesheets_footer() {
 	
 wp_enqueue_style('footer', get_theme_file_uri('/css/sections/footer.css'));
 wp_enqueue_style('how-it-works', get_theme_file_uri('/css/sections/how-it-works.css'));
@@ -99,7 +92,7 @@ if(is_single()){
 	}
 }
 
-add_action('get_footer', 'petrucci_stylesheets_footer');
+add_action('wp_footer', 'petrucci_stylesheets_footer');
 
 // loads enqueued javascript files deferred
 function mind_defer_scripts( $tag, $handle, $src ) {
@@ -222,7 +215,7 @@ if (strpos($id, 'modal') !== false) {
 add_shortcode( 'button', 'btn_shortcode' );
 
 function book_online_button_shortcode() {
-    return '<a class="small btn-pulse" style="margin:0;" href="#expert-opinion"><span class="btn-main">Get Expert Opinion &rarr;</span></a>';
+    return '<a class="small btn-pulse" style="margin:0;" href="/contact/"><span class="btn-main">Get Expert Opinion</span></a>';
 }
 add_shortcode('book_online_button', 'book_online_button_shortcode');
 
@@ -263,7 +256,7 @@ add_shortcode('nav_cta', 'global_cta_shortcode');
 function sw_forensic_contact_shortcode() {
   $phone = globalPhone(); // get phone number dynamically
     return do_shortcode('
-[button href="#expert-opinion" class="d-lg-hidden d-inline-block small contact-expert" style="margin-left:0px;margin-rigth:30px;"]Get Expert Opinion[/button][button href="/wp-content/uploads/2025/11/Steven-White-CV.pdf" target="_blank" class="white d-lg-hidden d-inline-block small cv-download" style="margin:0px 10px;"]CV Download[/button]
+[button href="/contact/" class="d-lg-hidden d-inline-block small contact-expert" style="margin-left:0px;margin-rigth:30px;"]Get Expert Opinion[/button][button href="/request-cv/" target="_blank" class="white d-lg-hidden d-inline-block small cv-download" style="margin:0px 10px;"]CV Download[/button]
         <div style="margin:15px 0px;">
             <span>Call or Text: </span>
             <a href="tel:+' . $phone . '" class="text-link d-inline-block phone">' . $phone . '</a>

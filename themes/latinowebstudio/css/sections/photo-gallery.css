@@ -1,7 +1,11 @@
-.lb-outerContainer {
+div#lightboxOverlay {
+    max-width: 100%;
+}
+
+/* .lb-outerContainer {
     background: transparent;
     padding: 0px 50px;
-}
+} */
 
 img.lb-image {
     border: none !important;

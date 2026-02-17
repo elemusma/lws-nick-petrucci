@@ -23,6 +23,11 @@ footer ul.menu>li:after {
     display: none;
 }
 
+.page-id-11 #menu-footer ul.menu li a {
+    color:black !important;
+    text-decoration: none;
+}
+
 /* @media only screen and (min-width: 768px) {
     ul#menu-footer {
         column-count: 2;

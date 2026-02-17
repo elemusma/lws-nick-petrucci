@@ -32,7 +32,7 @@
               <div id="logoMain" style="min-width:100px;width:90%;transition:all .25s ease-in-out;">
                 <div style="pointer-events:none;">
                   <?php 
-                  echo wp_get_attachment_image(logoImg()['id'], 'full', false, array( 'alt' => get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ), 'style' => 'width:100%;height:auto;' ));
+                  echo wp_get_attachment_image(logoImg()['id'], 'full', false, array( 'alt' => get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ), 'style' => 'width:100%;height:auto;','class'=>'skip-lazy' ));
                   ?>
                 </div>
               </div>

@@ -24,7 +24,7 @@ Version: 1.0
   --accent-septenary: #0277a3;
   --accent-octonary: #0e4863;
   --light: #E0E0E0;
-  --light-secondary: #e8edec;
+  --light-secondary: #cccccc;
   --text-shadow: 1px 1px 1px black;
   --text-shadow-white: 1px 1px 1px white;
   --proxima-font: 'poppinsregular';
@@ -59,6 +59,14 @@ Version: 1.0
     bottom: 0;
     height: 100px;
 }
+.bg-gradient-secondary-primary-top {
+    background: #D6B981;
+    background: linear-gradient(0deg, rgba(214, 185, 129, 1) 0%, rgba(224, 224, 224, 1) 100%);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100px;
+}
 .bg-gradient-secondary-primary {
     background: #D6B981;
     background: linear-gradient(0deg, rgba(214, 185, 129, 1) 0%, rgba(224, 224, 224, 1) 100%);
@@ -81,5 +89,21 @@ Version: 1.0
     width: 100%;
     position: absolute;
     bottom: 0;
+    height: 100px;
+}
+.bg-gradient-white-secondary-top {
+    background: #FFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 1) 100%);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100px;
+}
+.bg-gradient-primary-white-top {
+    background: #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(214, 185, 129, 1) 100%);
+    width: 100%;
+    position: absolute;
+    top: 0;
     height: 100px;
 }

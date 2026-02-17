@@ -25,7 +25,11 @@ input#gform_submit_button_1:hover {
 .gform-footer.gform_footer.top_label {
     text-align: center;
     justify-content: center;
-    margin-bottom: -17.5px;
+}
+@media only screen and (min-width: 768px) {
+    .gform-footer.gform_footer.top_label {
+        margin-bottom: -67.5px;
+    }
 }
 
 .text-white label.gfield_label.gform-field-label {
